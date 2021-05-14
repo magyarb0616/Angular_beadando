@@ -1,0 +1,23 @@
+<p>Cripto árfolyam!</p>
+
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Rank</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let temp of service.adat">
+            <td>{{temp.id}}</td>
+            <td>{{temp.name}}</td>
+            <td>{{temp.symbol}}</td>
+            <td>{{temp.rank}}.</td>
+            <td>{{temp.price}} - HUF</td>
+            <td><button routerLink="/Edit" class="btn btn-primary" (click)="service.transporter(temp)">Edit</button></td>
+            <td><button class="btn btn-primary" (click)="delete(temp)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<router-outlet></router-outlet>

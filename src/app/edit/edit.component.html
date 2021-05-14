@@ -1,0 +1,24 @@
+<p>edit works!</p>
+<form>
+  <div class="">
+    <label for="idInput">ID: </label>
+    <input type="text" name="idInput" id="idInput" placeholder="Enter ID" [(ngModel)]="data.id">
+  </div>
+  <div class="">
+    <label for="nameInput">Name: </label>
+    <input type="text" name="nameInput" id="nameInput" placeholder="Enter Name" [(ngModel)]="data.name">
+  </div>
+  <div class="">
+    <label for="symbolInput">Symbol: </label>
+    <input type="text" name="symbolInput" id="symbolInput" placeholder="Enter Symbol" [(ngModel)]="data.symbol">
+  </div>
+  <div class="">
+    <label for="rankInput">Rank: </label>
+    <input type="number" name="rankInput" id="rankInput" min="16" placeholder="Enter rank or leave it empty" [(ngModel)]="data.rank">
+  </div>
+  <div class="">
+    <label for="priceInput">Price: </label>
+    <input type="number" name="priceInput" id="priceInput" placeholder="Enter Price" [(ngModel)]="data.price">
+  </div>
+  <button routerLink="/List" type="submit" class="" (click)="save()">Save</button>
+</form>
