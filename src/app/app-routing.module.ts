@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: "Login",
     component: LoginComponent
+  },
+  {
+    path: "**",
+    component: LoginComponent
   }
 ];
 

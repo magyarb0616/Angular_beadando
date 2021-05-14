@@ -13,6 +13,7 @@ export class MyServiceService {
   constructor(private http: HttpClient) {
 }
 
+
    public fetch(): Observable<any> {
      return this.http.get("https://api.coinstats.app/public/v1/coins?skip=0&limit=15&currency=HUF");
    }
