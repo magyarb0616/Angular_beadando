@@ -8,13 +8,15 @@ import { MyServiceService } from './my-service.service';
 import { EditComponent } from './edit/edit.component';
 import {FormsModule} from "@angular/forms";
 import { AddComponent } from './add/add.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     EditComponent,
-    AddComponent
+    AddComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

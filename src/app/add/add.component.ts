@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AdatModel} from "../Model/AdatModel";
 import { MyServiceService } from '../my-service.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-add',
@@ -11,9 +12,11 @@ export class AddComponent implements OnInit {
 
   data = new AdatModel();
 
-  constructor(private service: MyServiceService) { }
+  constructor(private service: MyServiceService, private router: Router) { }
 
   ngOnInit(): void {
+    if(!localStorage.getItem("user"))
+    this.router.navigate(['/Login'])
   }
 
   save(): void {

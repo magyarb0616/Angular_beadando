@@ -22,5 +22,7 @@ export class MyServiceService {
       this.index = this.adat.indexOf(adat);
       console.log("in transporter function: index= "+this.index)
     }
+
+
 }
 
