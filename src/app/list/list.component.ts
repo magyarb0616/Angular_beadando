@@ -16,16 +16,15 @@ export class ListComponent implements OnInit {
     if(!localStorage.getItem("user")){
       this.router.navigate(['/Login'])
     } else {
-              if (this.service.adat.length === 0) {
-                  this.service.fetch().subscribe(
-                    {
-                      next:(data: any) => (console.log('Start'),this.service.adat = data.coins),
-                      error: error => console.log('An error has occurred: '+error),
-                      complete: () => (console.log(this.service.adat), console.log('Done!'))
-                    }
-                  );
-              }
-            }
+          if (this.service.adat.length === 0) {
+              this.service.fetch().subscribe({
+                  next:(data: any) => (console.log('Start'),this.service.adat = data.coins),
+                  error: error => console.log('An error has occurred: '+error),
+                  complete: () => (console.log(this.service.adat), console.log('Done!'))
+                }
+              );
+          }
+        }
   }
 
   delete(adat: any): void{

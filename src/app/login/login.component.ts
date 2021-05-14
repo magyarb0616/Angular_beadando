@@ -30,10 +30,8 @@ export class LoginComponent implements OnInit {
       if(user == "root" && pass == "pass"){
         this.router.navigate(['/List']);
         localStorage.setItem("user", "admin");
-      }
-      else alert("User doesn't exist");
-    }
-    else alert("There are empty fields");
+      } else alert("User doesn't exist");
+    } else alert("There are empty fields");
   }
 
 }

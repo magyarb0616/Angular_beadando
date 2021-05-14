@@ -9,12 +9,12 @@ import {Router} from "@angular/router";
 export class AppComponent {
   title = 'beadando';
 
-constructor(private router: Router) {
-}
+  constructor(private router: Router) {
+  }
 
-logOut(){
-  localStorage.removeItem("user");
-  this.router.navigate(['/Login']);
-}
+  logOut(){
+    localStorage.removeItem("user");
+    this.router.navigate(['/Login']);
+  }
 
 }
