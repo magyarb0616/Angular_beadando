@@ -17,10 +17,10 @@ export class MyServiceService {
      return this.http.get("https://api.coinstats.app/public/v1/coins?skip=0&limit=15&currency=HUF");
    }
 
-  public index: number;
-  transporter(adat: any): void{
-    this.index = this.adat.indexOf(adat);
-    console.log("in transporter function: index= "+this.index)
-  }
+    public index: number;
+    transporter(adat: any): void{
+      this.index = this.adat.indexOf(adat);
+      console.log("in transporter function: index= "+this.index)
+    }
 }
 
